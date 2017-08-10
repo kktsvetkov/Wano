@@ -46,7 +46,7 @@ This is not recommended, but if you want to, you can manually report directly in
 
 	\Wano\Nab::error_log(E_USER_WARNING, 'egati probata', __FILE__, __LINE__);
 
-If for whatever reason you do not want to have a register_shutdown_function() print the results, you can do it manually. For that purpose you need to replace `\Wano\Nab::register()` with `\Wano\Nab::registerErrorHandler()` which will only attach the custom error_handler. Then, you are ready to print the results, you have to call `\Wano\Nab::display()`:
+If for whatever reason you do not want to have a register_shutdown_function() print the results, you can do it manually. For that purpose you need to replace `\Wano\Nab::register()` with `\Wano\Nab::registerErrorHandler()` which will only attach the custom error_handler. Then, you are ready to print the results, you have to call `\Wano\Nab::display()`
 
 	\Wano\Nab::registerErrorHandler();
 	...
