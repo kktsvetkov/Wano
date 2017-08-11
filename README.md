@@ -1,3 +1,5 @@
+![Wano Screenshot](http://kaloyan.info/wano.github.com/1.png "Screenshot from \Wano\Display\NiftyDisplay")
+
 # Wano
 Wano (short for **WA**~~rnings~~ & **NO**~~tices~~), is a small PHP tool meant to help reporting PHP error messages.
 
