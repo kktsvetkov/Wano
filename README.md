@@ -55,3 +55,12 @@ If for whatever reason you do not want to have a register_shutdown_function() pr
 
 	/* It's time, print what you have collected already */
 	\Wano\Nab::display();
+
+## Examples
+You can find few examples inside the [`examples/`](/examples/) folder. Here you can see them in action:
+
+ * [examples/nifty.php](http://kaloyan.info/wano.github.com/demo/nifty.php) using [`\Wano\Display\NiftyDisplay`](/src/Display/NiftyDisplay.php)
+ [![examples\nifty.php](http://kaloyan.info/wano.github.com/2.png)](http://kaloyan.info/wano.github.com/demo/nifty.php)
+
+ * [examples/basic.php](http://kaloyan.info/wano.github.com/demo/basic.php) using [`\Wano\Display\BasicDisplay`](/src/Display/BasicDisplay.php)
+[![examples\basic.php](http://kaloyan.info/wano.github.com/3.png)](http://kaloyan.info/wano.github.com/demo/basic.php)
