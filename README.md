@@ -53,7 +53,7 @@ If for whatever reason you do not want to have a register_shutdown_function() pr
 	\Wano\Nab::registerErrorHandler();
 	...
 
-	/* It's time, print what you have collected already */
+	// It's time, print what you have collected already 
 	\Wano\Nab::display();
 
 ## Examples
