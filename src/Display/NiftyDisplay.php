@@ -364,7 +364,7 @@ wano = {
 				echo '<div class="wano-block wano-source">';
 					echo '<span class="wano-close" onClick="wano.block(\'source\',this)"></span>';
 					echo '<b><span class="wano-icon">&lt;/&gt;</span> Source Code</b>';
-					$this->printSource($code, $log[4]);
+					self::printSource($code, $log[4]);
 				echo '</div>';
 			}
 
