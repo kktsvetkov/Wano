@@ -2,8 +2,10 @@
 * Demonstration of what Wano does
 */
 
-/* you do not need this if you are using composer */
-require dirname(__FILE__) . '/../autoload.php';
+if (!class_exists('\\Wano\\Nab'))
+{
+	require __DIR__ . '/../autoload.php';	
+}
 
 /* enable Wano to start collecting PHP error messages */
 \Wano\Nab::register();
