@@ -9,9 +9,9 @@ It is also important to mention that it is a bad policy to ignore and silence PH
 
 ## Basic use
 In order to use it, you just need to call `\Wano\Nab::register()`
-
+```php
 	\Wano\Nab::register();
-
+```
 ...and that's it. Default settings and configurations will be used and you do not have to do anything else.
 
 ## How it works ?
@@ -33,29 +33,29 @@ As explained above, there are two tasks that ***Wano*** does: a) collects the PH
 Here's what you can do to step out of the default behaviour and settings.
 
 You can choose what type of PHP error levels ***Wano*** should collect. The format is the same used for error_reporting() -- a bitmask of the error levels. This is provided as the argument for `\Wano\Nab::register()`
-
+```php
 	\Wano\Nab::register(E_WARNING | E_USER_WARNING | E_NOTICE | E_USER_NOTICE);
-
+```
 Backtraces are really helpful when you want to track how a certain PHP error message was raised. On the other hand, in some occasions for some PHP error message levels having backtraces is just overhead. Using the same bitmask format you can declare which PHP error message levels to include backtraces when they are reported:
-
+```php
 	\Wano\Nab::$backtrace = E_WARNING | E_USER_WARNING;
-
+```
 You can change how the results are printed by creating your own `\Wano\Display` class. To do that you have to create a new class that is implementing the `\Wano\Display\DisplayInterface` interface, and then use `\Wano\Nab::setDisplay()` method to attach it:
-
+```php
 	\Wano\Nab::setDisplay(new \Wano\Display\BasicDisplay);
-
+```
 This is not recommended, but if you want to, you can manually report directly into ***Wano***, like this:
-
+```php
 	\Wano\Nab::error_log(E_USER_WARNING, 'egati probata', __FILE__, __LINE__);
-
+```
 If for whatever reason you do not want to have a register_shutdown_function() print the results, you can do it manually. For that purpose you need to replace `\Wano\Nab::register()` with `\Wano\Nab::registerErrorHandler()` which will only attach the custom error_handler. Then, you are ready to print the results, you have to call `\Wano\Nab::display()`
-
+```php
 	\Wano\Nab::registerErrorHandler();
 	...
 
-	// It's time, print what you have collected already 
+	// It's time, print what you have collected already
 	\Wano\Nab::display();
-
+```
 ## Examples
 You can find few examples inside the [`examples/`](/examples/) folder. Here you can see them in action:
 
